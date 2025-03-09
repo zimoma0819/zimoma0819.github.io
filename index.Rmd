@@ -1,24 +1,29 @@
 ---
-title: "Look at this!"
+#title: "Welcome to Zina's Home Page"
 ---
 
-# I have a webpage!
+## Stay Curious, Stay Compassionate
 
-And I can put all kinds of stuff on it!
-
-Here we've got some general setup for your webpage. 
-
-# Here is a heading
-
-[This links to other pages!](about)
+Hello! I'm Zimo (Zina) Ma, a graduate student at the University of Chicago, where I am pursuing a Master of Arts in Computational Social Science, expected to graduate in June 2025. My academic and professional journey is a blend of technical rigor with social consciousness, aiming to leverage data science to decode complex human behaviors and drive equitable solutions.
 
 
 
-## Advancing your skills
+### Education Backgrounds
 
-You can take what we've done here and do additional adaptations. 
+I graduated from DePauw University with a Bachelor of Arts, majoring in both Mathematics and Psychology. This interdisciplinary education enables me to integrate quantitative modeling with deep behavioral insights, providing a robust foundation for tackling complex challenges. Currently, as a graduate student at the University of Chicago, I am pursuing a Master of Arts in Computational Social Science, expected to graduate in June 2025. 
 
-For example, you can explore other formats, [such as prettydoc](https://prettydoc.statr.me/) as it will give you greater customization. 
 
-### Custom CSS
-If you're looking to REALLY customize, you can add a custom.css file. You can see there is an example css file here that can make some changes. To add them, you can add `css: custom.css', indenting it under 'html' in [the _site.yml](_site.yml) file. 
+
+
+### Future Goals
+
+Looking ahead, I aim to further my expertise in machine learning and data visualization, with the goal of contributing to innovative solutions in social science and policy-making. I am particularly interested in the intersection of technology and social impact, aspiring to create tools and models that promote equity and understanding across diverse communities.
+
+
+
+### Connect With Me
+
+I am always eager to connect with fellow data enthusiasts and professionals. You can reach me at [my email](mailto:zimoma0819@uchicago.edu) or connect with me on [LinkedIn](https://www.linkedin.com/in/zimo-ma-95a62b220/). Let's collaborate and make a positive impact together!
+
+Thank you for visiting my site and getting to know more about my professional journey and personal interests. I look forward to the opportunities and challenges that lie ahead!
+

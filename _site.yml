@@ -3,19 +3,33 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: 'Projects' ## setting up a drop down menu
+    - text: "Home"
+      href: index.html
+      
+    - text: "Research Experience"
+      href: ReEx.html
+      
+    - text: "Interests and Hobbies"
+      href: Hobbies.html
+      
+    - text: 'Projects'
       menu:
-        - text: 'Plotly'
-          href: text.html
-        - text: 'Shiny/Tableau'
-          href: text2.html
-    - text: "About"
-      href: about.html
+        - text: 'MA Thesis:'
+          href: plotly.html  # Ensure this links directly to your Plotly project page.
+        - text: 'Innovation 80: text analyses of surveys'
+          href: https://zimoma.shinyapps.io/Inno80text/  
+    #- text: "About"
+    #  href: about.html
     - icon: fa-github fa-lg
-      href: http://github.com/
-output: 
+      href: http://github.com/zimoma0819  # Replace 'yourusername' with your actual GitHub username.
+
+sidebar:
+  - getting-started
+
+output:
   html_document:
-    theme: united
-    toc: yes
+    css: custom.css
+   # theme: sandstone
+    toc: true
     toc_float:
       collapsed: false

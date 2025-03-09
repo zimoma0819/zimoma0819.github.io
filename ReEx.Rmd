@@ -1,0 +1,16 @@
+---
+title: "Research Experience"
+---
+
+
+### Reseach Experience
+
+Throughout my academic career, I have engaged in various research projects that blend computational methods with social science to address pertinent issues. My current research (MA Thesis) explores visual stereotypes in the workplace, focusing on how perceived attributes based on face, such as attractiveness and trustworthiness, and gender stereotypes influence hiring decisions.
+
+My experience at DePauw University as a Research Analyst allowed me to delve into gender-related disparities, where I utilized GIS and statistical methods to explore the socioeconomic factors influencing the disproportional impact of natural disasters on Indian women. I also focused on examining the effects of the COVID-19 pandemic on STEM education. Through comprehensive data analysis using Chi-Square tests and independent t-tests, I assessed how different student demographics experienced changes in STEM learning environments during the pandemic. 
+
+At the University of Chicago, my focus has shifted towards understanding visual stereotypes in the workplace. My ongoing thesis work investigates how perceptions of visual stereotypes—particularly facial attractiveness, gender, and 32 other attributes—affect job suitability assessments for client-facing versus back-office roles. This research aims to identify and analyze biases in hiring practices and develop data-driven strategies to mitigate these biases, promoting more equitable employment practices. 
+
+Each of these research endeavors has not only sharpened my skills in data handling and analysis but also deepened my understanding of how data can profoundly influence public policy and human rights initiatives. This appreciation drives my ongoing commitment to apply rigorous data science methods to uncover and address systemic challenges within society.
+
+You may click *Project* to check my research.
