@@ -1,154 +1,93 @@
-#main .nav-pills > li.active > a,
-#main .nav-pills > li.active > a:hover,
-#main .nav-pills > li.active > a:focus {
-   background-color: #f433ff;
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50; /* Soft dark grayish-blue for general text */
+    background-color: #f8f9fa; /* Light background for a fresher look */
 }
 
-/* Change navbar link text color */
-.navbar-nav .nav-link {
-  color: #FF5733; /* Text color */
-}
-
-/* Change navbar link text color on hover */
-.navbar-nav .nav-link:hover {
-  color: #800;  /* Text color when hovering */
-}
-
-#main .nav-pills > li > a:hover {
-  background-color: #f433ff;
-}
-
-#main a:link {
-  color: #f433ff;
-}
-
-/* visited link */
-#main a:visited {
-  color: #881ca3;
-}
-
-/* mouse over link */
-#main a:hover {
-  color: #f433ff;
-}
-
-/* selected link */
-#main a:active {
-  color: #716464;
-}
-
-h1,h2,h3,h4,h5,h6,legend{
-    color: #f433ff;
+/* Header Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif; /* Slightly more formal font for headers */
+    color: #17a2b8; /* Soft blue for a light, refreshing feel */
 }
 
 h1 {
-  font-size: 40px;
+    font-size: 36px; /* Slightly smaller than your previous 40px for a less imposing look */
+    margin-bottom: 0.5em; /* Ensuring proper spacing under headers */
 }
 
 h2 {
-  font-size: 25px;
+    font-size: 30px;
+    margin-bottom: 0.4em;
 }
 
-body {
-  font-size: 16px;
+h3 {
+    font-size: 24px;
+    margin-bottom: 0.3em;
 }
 
-#nav-top span.glyphicon {
-  color: #f433ff;
-}
-
-#table-of-contents header{
-    color:#f433ff;
-    background-color: #f433ff;
-}
-
-.list-group-item.active,.list-group-item.active:hover,.list-group-item.active:focus {
-    z-index: 2;
-    color: #ffffff;
-    background-color: #f433ff;
-    border-color: #f433ff
-}
-
-
+/* Link Styles */
 a {
-    color: #881ca3;
-    text-decoration: none
+    color: #20c997; /* Minty green for links to stand out softly */
+    text-decoration: none; /* No underline to keep it clean */
 }
 
-
-
-a:hover, a:focus{
-    color:#f433ff
-    text-decoration: underline
+a:hover, a:focus {
+    color: #0c7c8c; /* Darker shade of blue when hovering for emphasis */
+    text-decoration: underline; /* Underline on hover for clarity */
 }
 
-a:visited{
-    color:#f433ff
+/* Navbar Customization */
+.navbar {
+    background-color: #b8daff; /* Very light blue background for navbar */
+    border-bottom: 2px solid #e3f2fd; /* Subtle border to define the navbar area */
 }
 
+.navbar-nav .nav-link {
+    color: #17a2b8; /* Matching the header style */
+    font-weight: bold; /* Making navbar items bold */
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+    color: #0d6efd; /* A vivid blue for hover states */
+}
+
+/* Active Navbar Link */
+.navbar-nav .active > .nav-link {
+    color: #fff;
+    background-color: #17a2b8;
+}
+
+/* Sidebar Styling */
 #sidebar {
-    color: #f433ff;
-    background: #f433ff;
+    background: #f8f9fa; /* Light background for the sidebar */
+    color: #20c997; /* Use the link color for sidebar text for consistency */
+    padding: 20px; /* Adequate padding for content within the sidebar */
 }
 
 #sidebar h2 {
-    color: #FFFFFF;
-    background-color: #98b7eb;
+    color: #17a2b8; /* Header color in the sidebar */
 }
 
 #sidebar a {
-    color: #FFFFFF;
+    color: #0c7c8c; /* Darker blue for sidebar links */
 }
 
 #sidebar a:hover {
-    background-color: #3F4548;
-    color: #FFFFFF;
+    color: #17a2b8; /* Lighter blue on hover for sidebar links */
+    text-decoration: underline;
 }
 
-.navbar {
-    background-image: linear-gradient(120deg, #f433ff, #881ca3);
+/* Table of Contents Customization */
+#table-of-contents {
+    color: #17a2b8;
+    background-color: #e3f2fd;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.nav-links li a {
-    color: #881ca3;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: inline-block;
-    transition: background-color 0.3s;
-}
-
-.nav-links li a:hover {
-    background-color: #555;
-}
-
-.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:focus {
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
     color: #ffffff;
-    background-color: #881ca3
-}
-
-.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus {
-    color: #f433ff;
-    background-color: #881ca3
-}
-
-.navbar-default .navbar-collapse,.navbar-default .navbar-form {
-    border-color: #f433ff
-}
-
-.navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:hover,.navbar-default .navbar-nav>.open>a:focus {
-    background-color: #f433ff;
-    color: #ffffff
-}
-
-.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus {
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #f433ff
-}
-
-.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus {
-    color: #ffffff;
-    text-decoration: none;
-    outline: 0;
-    background-color: #f433ff
+    background-color: #20c997; /* Active item in ToC or list uses the link color */
+    border-color: #20c997;
 }
