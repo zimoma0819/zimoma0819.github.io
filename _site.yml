@@ -16,6 +16,8 @@ navbar:
       menu:
         - text: 'Proposal'
           href: Proposal.html
+        - text: 'Job Suitability Distributions'
+          href: Thesis.html
     - text: 'Projects'
       menu:
         - text: 'Innovation 80: text analyses of surveys'
