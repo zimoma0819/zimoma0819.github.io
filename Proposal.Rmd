@@ -1,0 +1,104 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="/custom.css">
+</head>
+
+---
+title: "What Is Beautiful Is Good: Visualizing the Role of Visual Stereotypes in the Workplace"
+author: "Zimo Ma"
+date: "November 2024"
+output: html_document
+---
+
+## Introduction
+
+In contemporary professional environments, the interplay between physical attractiveness and career success has been a focal point of academic inquiry (Dion et al., 1972; Hamermesh & Biddle, 1994; Ruffle and Shtudiner, 2015; Ho et al., 2000,  Judge and Cable, 2004). This phenomenon is often encapsulated by the stereotype "what is good is beautiful" which was initially addressed by Dion et al. (1972). In their research, they claim that individuals who are perceived as attractive will naturally have many desirable traits, such as high competency, happy life, and a good marriage. Past research has extensively studied the application of this stereotype in various occupational settings, such as job callbacks and salary levels (Hamermesh & Biddle, 1994; Ruffle and Shtudiner, 2015; Frieze et al.,1990; Dinda et al., 2006) and found that attractiveness is often afforded undue advantage and disadvantage (Anderson et al., 2014; Baron, 1983; Chen et al., 2020; Agthe et al., 2011). However, most of these studies focused on the impact of attractiveness on a specific job performance within one occupation, often overlooking a comparative analysis of the appearance stereotype across diverse job types (Hamermesh & Biddle, 1994; Ruffle and Shtudiner, 2015; Ho et al. 1999, 2000). Given this gap, the present study aims to identify the visual stereotypes associated with different occupations from two perspectives, client-facing and back-office roles, and locate the role of attractiveness in these stereotypes. I propose to investigate the following research questions:
+
+- **RQ1:** What are the visual stereotypes associated with different client-facing versus back-office occupations?
+- **RQ2:** What role does the perception of attractiveness play in these stereotypes?
+
+Specifically, I hypothesize that the standards and expectations of attractiveness are notably higher in client-facing roles. These research questions are important because they allow us to venture beyond traditional investigations of attractiveness biases, uncovering how such biases are differentially manifested and valued depending on the nature of the job. By dissecting the nuances of these stereotypes, this study seeks to contribute to a deeper theoretical understanding of the role of physical appearance in professional evaluations and to challenge prevailing norms within discrimination practices and workplace diversity. Empirically, the findings are anticipated to inform human resource strategies, promoting more equitable hiring practices that can potentially mitigate the influence of superficial biases.
+
+
+---
+
+## Literature Review
+
+Research has consistently shown that physical attractiveness significantly influences career outcomes (Dion et al., 1972; Davis et al., 1988; Forsythe et al., 1985; ). In the 1970s, Dion et al. (1972) initiated the exploration of this impact by demonstrating the "what is beautiful is good" stereotype. They defined “what is beautiful is good” as the natural tendency that people have to extrapolate from the attractive traits possessed by an individual, and assume they must also possess other desirable traits as well (Dion et al., 1972). Specifically, people who are perceived as more attractive are also viewed as more competent, more likely to have successful careers, have a better marriage life, and so on (Dion et al., 1972). 
+
+
+Building on foundational research by Dion et al. (1972), which linked physical attractiveness to perceived social and professional competence, subsequent studies have sought to understand how these perceptions influence success in professional settings (Hamermesh & Biddle, 1994; Chiu and Babcock, 2002;  Ruffle and Shtudiner, 2015; Heineck, G., 2004). For example, Hamermesh and Biddle (1994) explored the economic advantages of beauty and examined how looks affect job candidates’ earnings. They found out that attractive individuals enjoy a "beauty premium" in terms of earnings​ (Hamermesh & Biddle, 1994). Similarly, Chiu and Babcock (2002) investigated the effect of facial attractiveness on interview selection chances, concluding that attractiveness has the most significant influence on hiring decisions and the probability of getting an interview. The effect of attractiveness even overshadowed work-related factors, such as work-related skills, working experience, GPA, and public examination results (Chiu and Babcock, 2002). Besides that, the positive correlations between attractiveness and work-related skills, as well as between attractiveness and work experience, pointed out human resource specialists perceived people with better looks to have more competent job skills and gain more desirable work experience (Chiu and Babcock, 2002). In a more recent study, Ruffle and Shtudiner (2015) concluded that attractive male candidates received higher call-back rates, suggesting a strong bias in favor of good-looking applicants in the hiring process​, although attractive female candidates experienced anti-attractiveness bias. 	
+
+All work mentioned above has shown preliminary evidence of the significant influence of facial attractiveness on hiring decisions, which often surpasses qualifications and experience. Moving beyond facial attractiveness, Timming et al. (2017) broadened the scope of appearance-related biases to include body art. Timming et al. (2017) supported the important idea that appearance could be weighted differently in different job types. Timming et al. (2017) conducted a study to evaluate the effect of visible tattoos on the hireability of different job types, specifically between customer-facing and back-office jobs. Timming et al. (2017) reported that participants rated images with visible tattoos and piercings as lower hireability for customer-facing jobs than for non-customer-facing positions. 
+
+Unlike Ruffle and Shtudiner (2015), who found consistent results of facial pro-attractiveness bias across multiple job fields, such as banking, finance, computer programming, sales, and customer service, Timming et al. (2017) however showed that other elements of physical appearances, such as tattoos and piercings, can actually impact hiring decisions of different job fields differently, customer-facing versus back-house roles. This has intrigued me to think that maybe there is more than attractiveness that can form the visual stereotypes in the hiring process of different job roles, and facial attractiveness might play a different role in these stereotypes. 
+
+The present study aims to identify the visual stereotypes associated with different occupations, client-facing versus back-office roles, and locate the role of attractiveness in these stereotypes. We hypothesize that the standards and expectations of attractiveness are notably higher in client-facing roles. We will develop a model inspired by the methods used by Peterson et al. (2022), which utilizes human judgments to assess the suitability of client-facing versus back-office roles based on facial attributes. More specific methods will be discussed in the following sections.
+    
+
+---
+
+## Methods
+
+### **Stimuli**
+
+In our upcoming study, we plan to utilize a collection of hyper-realistic facial images from those used by Peterson et al. (2022), who utilized 1,004 synthetic yet photorealistic face images generated through StyleGAN2 (SG2), which were conditioned on a 512-dimensional, unit-variance, multivariate normal latent variable. These images were carefully curated to minimize artifacts and ensure diversity among the samples. Considering that the evaluations will be related to job suitability, we will exclude kids’ facial images from the stimuli in Peterson et al. (2022), leaving about 817 adult facial images.
+
+
+### **Participants**
+
+For participant recruitment, we will employ Amazon Mechanical Turk, enabling us to gather a wide range of responses from a diverse, distributed population. To meet the requirements of our study design, where each of the facial images needs to be evaluated by at least 30 different participants for each job type, and given that each participant will rate 166 unique images, we aim to recruit a minimum of 425 participants. Participants will be paid for their participation, and we will further determine the specific amount. 
+    
+### **Procedures**
+
+In this study, we will employ a between-subjects design where participants need to evaluate faces for each job type, a client-facing job or a back-office job. Among common job roles identified on Indeed, we specifically selected the roles of "Financial Advisor" and "Retail Sales Associate" to represent customer-facing positions and "Risk Analyst" and "Inventory Manager" for back-office positions in Finance and Retail industries (Indeed, 2024). Participants will need to complete the evaluations of 166 stimuli images. 136 images will be randomly selected from the full set of 817 images, and 30 will be randomly selected from the 136 faces to measure interrater reliability. During each trial, participants will be presented with a job tile with job descriptioins, following with a manipulation test. Then, they will be presented one facial image and asked to assess its suitability for the assigned job title on the questions "To what extent do you think this person is suitable for a [Job Title]?" on a continuous slider scale of 0 (not at all) to 100 (very much so). Each facial image will be presented randomly one after another. 
+    
+### **Analysis**
+
+This study will utilize the algorithmic framework developed by Peterson et al. (2022), to extract high-dimensional feature vectors from the facial images used in the experiment procedure above. These feature vectors effectively map psychological attributes onto facial representations.  Additionally, using data obtained from the human judgments in the experiment procedure above, I will use similar machine-learning techniques as Peterson et al., (2022). Specifically, I will use a psychological encoder to transform the high-dimensional feature vectors extracted from the facial images into a space of psychological attributes. This encoder works by linearly relating latent facial features to averaged human ratings of psychological traits, thereby quantifying the influence of facial features on perceived psychological dimensions and human judgments obtained from the experiment procedure described above.
+
+In this study, we will adapt the encoder to develop dimensions specifically tailored for assessing 'Client-Facing Job Suitability' and 'Back-Office Job Suitability.' By mapping the facial features identified as significant in psychological evaluations to these job-specific dimensions, we utilize the established model to initially explore the interrelationships among various facial attributes. We will conduct a correlation matrix to explore and identify which attributes are most closely related to job suitability and how attributes interrelate. After identifying significant correlations, we will use a multi-regression model to dig deeper into how each attribute specifically affects job suitability, controlling for other attributes. This will enable us to analyze the differential contributions of various facial attributes to job suitability, providing insights into how biases in facial perception can affect employment opportunities in distinct job contexts.
+
+
+## Reference
+
+- Agthe, M., M. Sp ̈orrle, J. K. Maner. (2011). Does being attractive always help? Positive and negative effects of attractiveness on social decision Making. Personality and Social Psychology Bulletin, 20(10) 1–13.
+
+- Anderson, R. C., Klofstad, C. A., Mayew, W. J., & Venkatachalam, M. (2014). Vocal Fry may undermine the success of young women in the labor market. PLoS ONE, 9(5). https://doi.org/10.1371/journal.pone.0097506
+
+- Baron, R. A. (1983). "Sweet smell of success"? The impact of pleasant artificial scents on evaluations of job applicants. Journal of Applied Psychology, 68(4), 709–713. https://doi.org/10.1037/0021-9010.68.4.709
+
+- Chen, L., Li, M., Wu, Y. J., & Chen, C. (2020). The voicer's reactions to voice: An examination of employee voice on perceived organizational status and subsequent innovative behavior in the Workplace. Personnel Review, 50(4), 1073–1092. https://doi.org/10.1108/pr-07-2019-0399 
+
+- Chiu, R. K., & Babcock, R. D. (2002). The relative importance of facial attractiveness and gender in Hong Kong selection decisions. The International Journal of Human Resource Management, 13(1), 141–155. https://doi.org/10.1080/09585190110092857 
+
+- Davis, L. L., and Lennon, S. J. (1988). Social cognition and the study of clothing and human-behavior. Social Behavior and Personality, 16, 175-186.
+
+- Dinda, S., Gangopadhyay, P. K., Chattopadhyay, B. P., Saiyed, H. N., Pal, M., & Bharati, P. (2006). Height, weight and earnings among coalminers in India. Economics and human biology, 4(3), 342–350. https://doi.org/10.1016/j.ehb.2005.10.003
+
+- Dion, K., E. Berscheid, E. Walster. 1972. What is beautiful is good. Journal of Personality and Social Psychology, 24, 285–290.
+
+- Forsythe, S., Drake, M. F., & Cox, C. E. (1985). Influence of applicant's dress on interviewer's selection decisions. Journal of Applied Psychology, 70(2), 374–378. https://doi.org/10.1037/0021-9010.70.2.374
+
+- Frieze, I. H., Olson, J. E., & Good, D. C. (1990). Perceived and actual discrimination in the salaries of male and female managers. Journal of Applied Social Psychology, 20, 46–67.
+
+- Hamermesh, D. S., & Biddle, J. E. (1994). Beauty and the Labor Market. The American Economic Review, 84(5), 1174–1194. http://www.jstor.org/stable/2117767
+
+- Heineck, G., (2004). Up in the skies? The relationship between body height and earnings in Germany, Labour, 19(3), 469–489. https://doi.org/10.1111/j.1467-9914.2005.00302.x
+
+- Ho, L. S., S. D. Wei, & J. P. Voon, 1999, Age discrimination in the labour market: fact or fiction? International Employment Relations Review, 5, pp. 43–52.
+
+- Ho, L. S., Wei, X. D., & Voon, J. P. (2000). Are old workers disadvantaged in the hong kong labour market? Asian Economic Journal, 14, 283–300.
+
+- Indeed (2024). 6 common types of back office jobs (with job titles) | indeed.com. https://www.indeed.com/career-advice/finding-a-job/types-of-back-office-jobs
+
+- Indeed. (2024). 23 customer service job titles (with salaries and duties) | indeed.com. https://www.indeed.com/career-advice/finding-a-job/customer-service-job-titles 
+
+- Judge, T. A., & Cable, D. M. (2004). The effect of physical height on workplace success and income: Preliminary test of a theoretical model. Journal of Applied Psychology, 89(3), 428–441. https://doi.org/10.1037/0021-9010.89.3.428 
+
+- Peterson, J. C., Uddenberg, S., Griffiths, T. L., Todorov, A., & Suchow, J. W. (2022). Deep models of superficial face judgments. Proceedings of the National Academy of Sciences (PNAS), 119(17), e2115228119. doi:10.1073/pnas.2115228119
+
+- Ruffle, B. J., & Shtudiner, Z. (2015). Are good-looking people more employable? Management Science, 61(8), 1760–1776. https://doi.org/10.1287/mnsc.2014.1927 
+
+- Timming, A. R., Nickson, D., Re, D., & Perrett, D. (2017). What do you think of my ink? Assessing the effects of body art on employment chances. Human Resource Management, 56(1), 133–149. https://doi.org/10.1002/hrm.21770
+
+

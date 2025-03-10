@@ -12,24 +12,25 @@ navbar:
     - text: "Interests and Hobbies"
       href: Hobbies.html
       
+    - text: 'MA Thesis'
+      menu:
+        - text: 'Proposal'
+          href: Proposal.html
     - text: 'Projects'
       menu:
-        - text: 'MA Thesis:'
-          href: plotly.html  # Ensure this links directly to your Plotly project page.
         - text: 'Innovation 80: text analyses of surveys'
           href: https://zimoma.shinyapps.io/Inno80text/  
     #- text: "About"
     #  href: about.html
     - icon: fa-github fa-lg
-      href: http://github.com/zimoma0819  # Replace 'yourusername' with your actual GitHub username.
-
+      href: http://github.com/zimoma0819  
 sidebar:
   - getting-started
 
 output:
   html_document:
     css: custom.css
-   # theme: sandstone
+    theme: sandstone
     toc: true
     toc_float:
       collapsed: false

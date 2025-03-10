@@ -1,0 +1,196 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="/custom.css">
+</head>
+
+---
+#title: "What Is Beautiful Is Good: Visualizing the Role of Visual Stereotypes in the Workplace"
+---
+
+
+# **Job Suitability Score Distributions Across Industries and Roles**
+
+## **Introduction**
+This visualization examines how **job suitability scores** vary **across industries and job roles**. It aims to explore whether **different roles (client-facing vs. back-office) receive systematically different ratings within Finance and Retail industries**.  
+
+The data comes from **participant ratings** of job suitability for individuals in different roles, allowing us to analyze **whether industry and role type influence perceived job suitability**.
+
+---
+
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+#install.packages("plotly")
+library(plotly)
+
+# set default theme for ggplot2
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
+# set default figure parameters for knitr
+knitr::opts_chunk$set(
+	fig.asp = 0.618,
+	fig.height = 12,
+	fig.retina = 2,
+	fig.width = 17,
+	dpi = 150,
+	include = TRUE,
+	out.width = "80%"
+)
+
+# Load actual data
+data <- read.csv("org_thesis_data.csv")
+```
+
+```{r include=FALSE}
+# Create Industry and Job Role categories
+data <- data %>%
+  mutate(
+    Industry = case_when(
+      condition %in% c("Financial Advisor", "Risk Analyst") ~ "Finance",
+      condition %in% c("Retail Sales Associate", "Inventory Manager") ~ "Retail",
+      TRUE ~ NA_character_
+    ),
+    JobRole = case_when(
+      condition %in% c("Financial Advisor", "Retail Sales Associate") ~ "Client-facing",
+      condition %in% c("Risk Analyst", "Inventory Manager") ~ "Back-office",
+      TRUE ~ NA_character_
+    )
+  )
+
+# Compute mean suitability scores for each Job Role within Industry
+mean_data <- data %>%
+  group_by(Industry, JobRole) %>%
+  summarise(mean_score = mean(raw_score))
+
+# Compute max density for each Job Role within Industry
+density_data <- data %>%
+  group_by(Industry, JobRole) %>%
+  summarise(max_density = max(density(raw_score)$y))
+
+# Merge max density with mean data to determine label position
+mean_data <- mean_data %>%
+  left_join(density_data, by = c("Industry", "JobRole")) %>%
+  mutate(label_y = max_density * 0.9)  # Adjust label height
+
+
+
+```
+
+```{r include=FALSE}
+# Generate Industry-Faceted Density Plot with Mean Lines
+P_final1 <- ggplot(data, aes(x = raw_score, fill = JobRole, color = JobRole)) +
+  geom_density(alpha = 0.4) +
+  facet_wrap(~ Industry, ncol = 1) +  # Facet by Industry
+  labs(
+    title = "Mean Suitability Score Distributions by Role and Industry",
+    subtitle = "Each data point represents the mean job suitability score assigned to a hyper-realistic image for a specific job title.",
+    x = "Mean Suitability Score Per Stimulus",
+    y = "Density"
+  ) +
+  scale_fill_manual(values = c("Client-facing" = "#009E73", "Back-office" = "#CC79A7")) +
+  scale_color_manual(values = c("Client-facing" = "#009E73", "Back-office" = "#CC79A7")) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 18, face = "bold"),
+    plot.subtitle = element_text(size = 10),
+    axis.title.x = element_text(size = 14),
+    axis.title.y = element_text(size = 14),
+    axis.text = element_text(size = 12),
+    strip.text = element_text(size = 14, face = "bold")
+  ) +
+  # Grey line to cover the x-axis
+  geom_hline(yintercept = 0, color = "grey", size = 1) +
+  # Add vertical mean lines
+  geom_vline(data = mean_data, aes(xintercept = mean_score, color = JobRole),
+             linetype = "dashed", size = 1) +
+  # Add mean labels dynamically positioned
+  geom_text(
+    data = mean_data,
+    aes(x = ifelse(JobRole == "Client-facing", mean_score + 7, mean_score - 7),
+        y = label_y + 0.008, 
+        label = paste0("Mean: ", round(mean_score, 2))),
+    inherit.aes = FALSE,
+    size = 4, color = "black"
+  ) +
+  # Change legend name from "JobRole" to "Job Role"
+  guides(fill = guide_legend(title = "Job Role"), color = "none")
+
+
+
+```
+
+
+
+
+```{r, echo=FALSE}
+# Convert to Plotly with Proper Layout
+ggplotly(P_final1, width = 800, height = 500) %>% 
+  layout(
+    title = list(
+      text = "Mean Suitability Score Distributions by Role and Industry",  
+      font = list(size = 16)  
+    ),
+    legend = list(
+      orientation = "h",  
+      x = 0.5,  
+      y = -0.2,  
+      xanchor = "center", 
+      yanchor = "top",
+      font = list(size = 12)  
+    )
+  )
+```
+
+
+
+
+
+
+
+
+
+
+
+## **Understanding the Visualization**
+The density plot below shows the **distribution of mean job suitability scores** for different job roles across two industries.  
+
+- **X-axis**: Mean suitability score rated per stimulus.  
+- **Y-axis**: Density, representing the distribution of ratings.  
+- **Facets**: The plot is split into **Finance** (top panel) and **Retail** (bottom panel) to highlight industry-specific differences.  
+- **Colors**:  
+  - **Green (Client-facing roles)**: Financial Advisor & Retail Sales Associate  
+  - **Pink (Back-office roles)**: Risk Analyst & Inventory Manager  
+- **Dashed vertical lines**: Represent the **mean suitability score** for each role, with **numerical labels** indicating their values.
+
+---
+
+## **Key Findings**
+### **1. Finance Industry (Top Panel)**
+- **Client-facing (Mean = 55.97) vs. Back-office (Mean = 55.25)**  
+- The distributions are **highly overlapping**, suggesting that suitability scores for **Finance** roles are **consistent regardless of whether the job is client-facing or back-office**.
+- This indicates that in the **Finance industry**, there may be **less appearance-based bias** in suitability judgments.
+
+### **2. Retail Industry (Bottom Panel)**
+- **Client-facing (Mean = 61.4) vs. Back-office (Mean = 56.12)**  
+- Unlike in Finance, a **clearer separation** emerges, with **Client-facing roles receiving higher suitability scores** than Back-office roles.  
+- This suggests that in **Retail**, people may perceive **client-facing jobs as requiring different traits**, potentially reflecting **appearance-based or personality-driven stereotypes**.
+
+---
+
+## **Implications & Next Steps**
+- **Industry differences**: **Retail** shows stronger differentiation in job suitability ratings than **Finance**.  
+- **Potential biases**: This may suggest **a preference for certain visual traits** in **customer-facing roles** within the Retail sector.  
+- **Further investigation**: A statistical test (e.g., t-tests, regression) will confirm whether these **differences are statistically significant**.
+
+This research helps us better understand how **job suitability perceptions differ by industry and role type**, with potential implications for **hiring practices and workplace biases**.
+
+---
+
+*Further analysis is underway to explore these patterns in greater depth!* 🚀
+
+
+
+
+
+
+
