@@ -1,3 +1,9 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="/custom.css">
+</head>
+
+
+
 ---
 title: "Research Experience"
 ---
