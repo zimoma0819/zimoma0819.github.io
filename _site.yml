@@ -25,7 +25,7 @@ navbar:
           href: https://zimoma.shinyapps.io/Inno80text/  
         - text: 'COVID-19 is Not All Bad News'    
           href: CovidRe.html
-    #  href: about.html
+
     - text : 'Resume'
       href: Resume.html
     - icon: fa-github fa-lg
@@ -36,7 +36,6 @@ sidebar:
 output:
   html_document:
     css: custom.css
-    theme: sandstone
     toc: true
     toc_float:
       collapsed: false
