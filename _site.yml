@@ -1,7 +1,7 @@
-name: "Student, Computational Social Scientist"
+name: "Zimo Ma, Computational Social Scientist"
 output_dir: "."
 navbar:
-  title: "Home"
+  title: "Zimo Ma, Computational Social Scientist"
   right:
     - text: "Home"
       href: index.html
