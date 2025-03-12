@@ -9,8 +9,8 @@ navbar:
     - text: "Interests and Hobbies"
       href: Hobbies.html
       
-    - text: "Research Experience"
-      href: ReEx.html
+   # - text: "Research Experience"
+   #   href: ReEx.html
    # - text: 'MA Thesis'
    #   menu:
    #    - text: 'Proposal'
@@ -23,7 +23,8 @@ navbar:
           href: Thesis.html
         - text: 'Innovation 80: text analyses of surveys'
           href: https://zimoma.shinyapps.io/Inno80text/  
-    #- text: "About"
+        - text: 'COVID-19 is Not All Bad News'    
+          href: CovidRe.html
     #  href: about.html
     - text : 'Resume'
       href: Resume.html

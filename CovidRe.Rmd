@@ -1,0 +1,11 @@
+---
+title: "COVID-19 is Not All Bad News: Negative and Surprisingly Positive Reports from College STEM Students and Implications for STEM Instruction"
+output: 
+  html_document:
+    toc: false
+    toc_float: false
+---
+
+[View My Scholarly Work (PDF)](COVID-19_is_Not_All_Bad_News.pdf)
+
+<iframe src="MAUPRC.pdf" width="100%" height="900px" style="border: none;"></iframe>
