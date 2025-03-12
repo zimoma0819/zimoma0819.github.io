@@ -1,11 +1,15 @@
+---
+title: "Interests and Hobbies"
+output: 
+  html_document:
+    toc: false
+    toc_float: false
+---
+
 <head>
   <link rel="stylesheet" type="text/css" href="/custom.css">
 </head>
 
-
----
-title: "Interests and Hobbies"
----
 
 
 From a young age, I have been deeply engaged in the arts, particularly through studying Chinese folk dances and playing piano. This early passion for dance not only connected me with my cultural heritage but also cultivated a deep appreciation for expressive movement and storytelling through art.
