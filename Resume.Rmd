@@ -1,0 +1,9 @@
+---
+title: "Zimo Ma's Resume"
+output: 
+  html_document:
+    toc: false
+    toc_float: false
+---
+
+<iframe src="Zimo_Ma_Resume.pdf" width="100%" height="900" frameborder="0" />

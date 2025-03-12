@@ -11,7 +11,6 @@ title: "What Is Beautiful Is Good: Visualizing the Role of Visual Stereotypes in
 
 ## Job Suitability Score Distributions Across Industries and Roles
 
-### Introduction
 This visualization examines how job suitability scores vary across industries and job roles. It aims to explore whether different roles (client-facing vs. back-office) receive systematically different ratings within Finance and Retail industries.  
 
 The data comes from participant ratings of job suitability for individuals in different roles, allowing us to analyze whether industry and role type influence perceived job suitability.
@@ -160,22 +159,16 @@ The density plot below shows the distribution of mean job suitability scores for
 
 ### Key Findings
 #### 1. Finance Industry (Top Panel)
-- Client-facing (Mean = 55.97) vs. Back-office (Mean = 55.25)  
-- The distributions are highly overlapping, suggesting that suitability scores for Finance roles are consistent regardless of whether the job is client-facing or back-office.
-- This indicates that in the Finance industry, there may be less appearance-based bias in suitability judgments.
+The distribution of job suitability scores for client-facing and back-office roles is highly overlapping, with the mean score for client-facing jobs (55.97) slightly higher than that of back-office roles (55.25). This suggests that suitability scores for finance roles remain consistent regardless of whether the job is client-facing or back-office, indicating that appearance-based bias may be less prevalent in suitability judgments within the finance industry.
 
 #### 2. Retail Industry (Bottom Panel)
-- Client-facing (Mean = 61.4) vs. Back-office (Mean = 56.12)  
-- Unlike in Finance, a clearer separation emerges, with Client-facing roles receiving higher suitability scores than Back-office roles.  
-- This suggests that in Retail, people may perceive client-facing jobs as requiring different traits, potentially reflecting appearance-based or personality-driven stereotypes.
-
----
+The mean job suitability scores for client-facing (61.4) and back-office (56.12) roles in the retail industry show a clearer separation compared to finance, with client-facing roles receiving higher scores. This suggests that in retail, people may perceive client-facing jobs as requiring different traits, potentially reflecting appearance-based or personality-driven stereotypes.
 
 ### Implications
 - Industry differences: Retail shows stronger differentiation in job suitability ratings than Finance.  
 - Potential biases: This may suggest a preference for certain visual traits in customer-facing roles within the Retail sector.  
 
-
+---
 
 ## The Effect of Attractiveness on Job Suitability Scores
 
