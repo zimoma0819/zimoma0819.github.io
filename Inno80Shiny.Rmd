@@ -6,6 +6,8 @@ output:
     toc_float: false
 ---
 
+[View My Paper (PDF)](Inno80_F.pdf)
+
 <style>
 /* Remove left sidebar and make the iframe full width */
 .main-container {

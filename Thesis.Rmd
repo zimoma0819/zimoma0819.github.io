@@ -158,13 +158,10 @@ The density plot below shows the distribution of mean job suitability scores for
 ---
 
 ### Key Findings
-#### 1. Finance Industry (Top Panel)
-The distribution of job suitability scores for client-facing and back-office roles is highly overlapping, with the mean score for client-facing jobs (55.97) slightly higher than that of back-office roles (55.25). This suggests that suitability scores for finance roles remain consistent regardless of whether the job is client-facing or back-office, indicating that appearance-based bias may be less prevalent in suitability judgments within the finance industry.
+For the Finance industry (top panel), the distribution of job suitability scores for client-facing and back-office roles is highly overlapping, with the mean score for client-facing jobs (55.97) slightly higher than that of back-office roles (55.25). This suggests that suitability scores for finance roles remain consistent regardless of whether the job is client-facing or back-office, indicating that appearance-based bias may be less prevalent in suitability judgments within the finance industry.
 
-#### 2. Retail Industry (Bottom Panel)
-The mean job suitability scores for client-facing (61.4) and back-office (56.12) roles in the retail industry show a clearer separation compared to finance, with client-facing roles receiving higher scores. This suggests that in retail, people may perceive client-facing jobs as requiring different traits, potentially reflecting appearance-based or personality-driven stereotypes.
+For the Retail industry (bottom panel), the mean job suitability scores for client-facing (61.4) and back-office (56.12) roles in the retail industry show a clearer separation compared to finance, with client-facing roles receiving higher scores. This suggests that in retail, people may perceive client-facing jobs as requiring different traits, potentially reflecting appearance-based or personality-driven stereotypes.
 
-### Implications
 - Industry differences: Retail shows stronger differentiation in job suitability ratings than Finance.  
 - Potential biases: This may suggest a preference for certain visual traits in customer-facing roles within the Retail sector.  
 
