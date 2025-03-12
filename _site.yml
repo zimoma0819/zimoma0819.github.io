@@ -9,20 +9,12 @@ navbar:
     - text: "Interests and Hobbies"
       href: Hobbies.html
       
-   # - text: "Research Experience"
-   #   href: ReEx.html
-   # - text: 'MA Thesis'
-   #   menu:
-   #    - text: 'Proposal'
-   #       href: Proposal.html
-   #     - text: 'Job Suitability Distributions'
-   #       href: Thesis.html
     - text: 'Projects'
       menu:
         - text: 'MA Thesis'
           href: Thesis.html
         - text: 'Innovation 80: text analyses of surveys'
-          href: Inno80Shiny.Rmd
+          href: Inno80Shiny.html
         - text: 'COVID-19 is Not All Bad News'    
           href: CovidRe.html
 

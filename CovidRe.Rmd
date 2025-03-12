@@ -8,4 +8,14 @@ output:
 
 [View My Scholarly Work (PDF)](COVID-19_is_Not_All_Bad_News.pdf)
 
+<style>
+/* Remove left sidebar and make the iframe full width */
+.main-container {
+    max-width: 100% !important;
+    width: 90% !important;
+    margin: 0 auto;
+    padding: 0;
+}
+</style>
+
 <iframe src="MAUPRC.pdf" width="100%" height="900px" style="border: none;"></iframe>
