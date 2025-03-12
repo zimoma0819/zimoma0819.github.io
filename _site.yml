@@ -22,7 +22,7 @@ navbar:
         - text: 'MA Thesis'
           href: Thesis.html
         - text: 'Innovation 80: text analyses of surveys'
-          href: https://zimoma.shinyapps.io/Inno80text/  
+          href: Inno80Shiny.Rmd
         - text: 'COVID-19 is Not All Bad News'    
           href: CovidRe.html
 
