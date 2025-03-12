@@ -6,24 +6,27 @@ navbar:
     - text: "Home"
       href: index.html
       
-    - text: "Research Experience"
-      href: ReEx.html
-      
     - text: "Interests and Hobbies"
       href: Hobbies.html
       
-    - text: 'MA Thesis'
-      menu:
-        - text: 'Proposal'
-          href: Proposal.html
-        - text: 'Job Suitability Distributions'
-          href: Thesis.html
+    - text: "Research Experience"
+      href: ReEx.html
+   # - text: 'MA Thesis'
+   #   menu:
+   #    - text: 'Proposal'
+   #       href: Proposal.html
+   #     - text: 'Job Suitability Distributions'
+   #       href: Thesis.html
     - text: 'Projects'
       menu:
+        - text: 'MA Thesis'
+          href: Thesis.html
         - text: 'Innovation 80: text analyses of surveys'
           href: https://zimoma.shinyapps.io/Inno80text/  
     #- text: "About"
     #  href: about.html
+    - text : 'Resume'
+      href: Resume.html
     - icon: fa-github fa-lg
       href: http://github.com/zimoma0819  
 sidebar:

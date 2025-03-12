@@ -3,16 +3,18 @@
 </head>
 
 ---
-#title: "What Is Beautiful Is Good: Visualizing the Role of Visual Stereotypes in the Workplace"
+title: "What Is Beautiful Is Good: Visualizing the Role of Visual Stereotypes in the Workplace"
 ---
 
+[View My Proposal (PDF)](Zimo_MA_Proposal.pdf)
 
-# **Job Suitability Score Distributions Across Industries and Roles**
 
-## **Introduction**
-This visualization examines how **job suitability scores** vary **across industries and job roles**. It aims to explore whether **different roles (client-facing vs. back-office) receive systematically different ratings within Finance and Retail industries**.  
+## Job Suitability Score Distributions Across Industries and Roles
 
-The data comes from **participant ratings** of job suitability for individuals in different roles, allowing us to analyze **whether industry and role type influence perceived job suitability**.
+### Introduction
+This visualization examines how job suitability scores vary across industries and job roles. It aims to explore whether different roles (client-facing vs. back-office) receive systematically different ratings within Finance and Retail industries.  
+
+The data comes from participant ratings of job suitability for individuals in different roles, allowing us to analyze whether industry and role type influence perceived job suitability.
 
 ---
 
@@ -143,54 +145,162 @@ ggplotly(P_final1, width = 800, height = 500) %>%
 
 
 
+### Understanding the Visualization
+The density plot below shows the distribution of mean job suitability scores for different job roles across two industries.  
 
-
-
-
-
-
-
-
-## **Understanding the Visualization**
-The density plot below shows the **distribution of mean job suitability scores** for different job roles across two industries.  
-
-- **X-axis**: Mean suitability score rated per stimulus.  
-- **Y-axis**: Density, representing the distribution of ratings.  
-- **Facets**: The plot is split into **Finance** (top panel) and **Retail** (bottom panel) to highlight industry-specific differences.  
-- **Colors**:  
-  - **Green (Client-facing roles)**: Financial Advisor & Retail Sales Associate  
-  - **Pink (Back-office roles)**: Risk Analyst & Inventory Manager  
-- **Dashed vertical lines**: Represent the **mean suitability score** for each role, with **numerical labels** indicating their values.
+- X-axis: Mean suitability score rated per stimulus.  
+- Y-axis: Density, representing the distribution of ratings.  
+- Facets: The plot is split into Finance (top panel) and Retail (bottom panel) to highlight industry-specific differences.  
+- Colors:  
+  - Green (Client-facing roles): Financial Advisor & Retail Sales Associate  
+  - Pink (Back-office roles): Risk Analyst & Inventory Manager  
+- Dashed vertical lines: Represent the mean suitability score for each role, with numerical labels indicating their values.
 
 ---
 
-## **Key Findings**
-### **1. Finance Industry (Top Panel)**
-- **Client-facing (Mean = 55.97) vs. Back-office (Mean = 55.25)**  
-- The distributions are **highly overlapping**, suggesting that suitability scores for **Finance** roles are **consistent regardless of whether the job is client-facing or back-office**.
-- This indicates that in the **Finance industry**, there may be **less appearance-based bias** in suitability judgments.
+### Key Findings
+#### 1. Finance Industry (Top Panel)
+- Client-facing (Mean = 55.97) vs. Back-office (Mean = 55.25)  
+- The distributions are highly overlapping, suggesting that suitability scores for Finance roles are consistent regardless of whether the job is client-facing or back-office.
+- This indicates that in the Finance industry, there may be less appearance-based bias in suitability judgments.
 
-### **2. Retail Industry (Bottom Panel)**
-- **Client-facing (Mean = 61.4) vs. Back-office (Mean = 56.12)**  
-- Unlike in Finance, a **clearer separation** emerges, with **Client-facing roles receiving higher suitability scores** than Back-office roles.  
-- This suggests that in **Retail**, people may perceive **client-facing jobs as requiring different traits**, potentially reflecting **appearance-based or personality-driven stereotypes**.
-
----
-
-## **Implications & Next Steps**
-- **Industry differences**: **Retail** shows stronger differentiation in job suitability ratings than **Finance**.  
-- **Potential biases**: This may suggest **a preference for certain visual traits** in **customer-facing roles** within the Retail sector.  
-- **Further investigation**: A statistical test (e.g., t-tests, regression) will confirm whether these **differences are statistically significant**.
-
-This research helps us better understand how **job suitability perceptions differ by industry and role type**, with potential implications for **hiring practices and workplace biases**.
+#### 2. Retail Industry (Bottom Panel)
+- Client-facing (Mean = 61.4) vs. Back-office (Mean = 56.12)  
+- Unlike in Finance, a clearer separation emerges, with Client-facing roles receiving higher suitability scores than Back-office roles.  
+- This suggests that in Retail, people may perceive client-facing jobs as requiring different traits, potentially reflecting appearance-based or personality-driven stereotypes.
 
 ---
 
-*Further analysis is underway to explore these patterns in greater depth!* 🚀
+### Implications
+- Industry differences: Retail shows stronger differentiation in job suitability ratings than Finance.  
+- Potential biases: This may suggest a preference for certain visual traits in customer-facing roles within the Retail sector.  
 
 
 
+## The Effect of Attractiveness on Job Suitability Scores
+
+Since I am still in the process of modeling, I will use simulated data (job suitability ratings and perceived attractiveness scores) from 100 images to generate this visualization for presentation purposes.
+
+```{r, include=FALSE}
+# Set seed for reproducibility
+set.seed(123)  
+
+# Define the number of samples per group
+n <- 100  
+
+# Generate four groups with different means and standard deviations for SuitabilityScore
+group1 <- round(pmin(pmax(rnorm(n, mean = 50, sd = 10), 0), 100))
+group2 <- round(pmin(pmax(rnorm(n, mean = 30, sd = 15), 0), 100))
+group3 <- round(pmin(pmax(rnorm(n, mean = 70, sd = 20), 0), 100))
+group4 <- round(pmin(pmax(rnorm(n, mean = 90, sd = 5), 0), 100))
+
+# Generate corresponding Attractiveness scores
+attr_group1 <- round(pmin(pmax(group1 + rnorm(n, mean = 0, sd = 10), 0), 100))  # Retail - Client-facing
+attr_group2 <- round(pmin(pmax(group2 + rnorm(n, mean = -15, sd = 10), 0), 100))  # Retail - Back-office
+attr_group3 <- round(pmin(pmax(group3 + rnorm(n, mean = 10, sd = 10), 0), 100))  # Finance - Back-office
+attr_group4 <- round(pmin(pmax(group4 + rnorm(n, mean = 0, sd = 10), 0), 100))  # Finance - Client-facing
+
+# Combine data into a data frame
+data1 <- data.frame(
+  SuitabilityScore = c(group1, group2, group3, group4),
+  AttractivenessScore = c(attr_group1, attr_group2, attr_group3, attr_group4),
+  Industry = rep(c("Retail", "Finance"), each = 2 * n),
+  JobRole = rep(c("Client-facing", "Back-office", "Back-office", "Client-facing"), each = n)
+)
+
+```
+
+
+```{r, include=FALSE}
+# Linear model with interaction term
+lm_model <- lm(SuitabilityScore ~ AttractivenessScore * JobRole, data = data1)
+
+# Summary of the model
+summary(lm_model)
+
+# Calculate regression slopes for each JobRole
+slopes <- data1 %>%
+  group_by(JobRole) %>%
+  summarize(
+    slope = coef(lm(SuitabilityScore ~ AttractivenessScore))[2],
+    JobRole
+  )
+
+# Extract slope difference and p-value
+slope_diff <- coef(lm_model)["AttractivenessScore:JobRoleClient-facing"]
+p_value <- summary(lm_model)$coefficients["AttractivenessScore:JobRoleClient-facing", "Pr(>|t|)"]
+
+# Create a label for slope difference and p-value
+interaction_label <- ifelse(
+  p_value < 0.05,
+  paste("Slope Difference:", round(slope_diff, 2), "\nSignificant (p < 0.05)"),
+  paste("Slope Difference:", round(slope_diff, 2), "\nNot Significant")
+)
+
+# Generate the plot with annotations
+P_final2 <- ggplot(data1, aes(x = AttractivenessScore, y = SuitabilityScore, color = JobRole)) +
+  geom_point(alpha = 0.6) +  # Add scatter points
+  geom_smooth(method = "lm", se = FALSE) +  # Add regression lines
+  labs(
+    title = "The Effect of Attractiveness on Job Suitability Scores",
+    x = "Attractiveness Score",
+    y = "Job Suitability Score"
+  ) +
+  scale_color_manual(values = c("Client-facing" = "#009E73", "Back-office" = "#CC79A7")) +
+  geom_text(
+    data = slopes,
+    aes(
+      x = 85,  # Place labels at the far right of the plot
+      y = ifelse(JobRole == "Client-facing", 25, 40),  # Separate labels vertically
+      label = paste("Slope:", round(slope, 2)),
+      color = JobRole
+    ),
+    inherit.aes = FALSE
+  ) +
+  # Add annotation for slope difference
+  annotate(
+    "text",
+    x = 50, y = 90,  # Adjust position as necessary
+    label = interaction_label,
+    size = 4,
+    fontface = "italic",
+    hjust = 0
+  ) +
+  theme_minimal() +
+  guides(fill = guide_legend(title = "Job Role"), color = guide_legend(title = "Job Role"))
+
+
+```
+
+
+```{r echo=FALSE, warning=FALSE}
+# Convert to plotly with adjusted layout
+ggplotly(P_final2, width = 800, height = 500) %>%
+  layout(
+    legend = list(
+      orientation = "h",  # Horizontal legend
+      x = 0.5,  # Center horizontally
+      y = -0.2,  # Move below the plot
+      xanchor = "center",
+      yanchor = "top",
+      font = list(size = 12)
+    )
+  )
+```
+### Understanding the Visualization
+A scatter plot with regression lines was chosen because it effectively visualizes the relationship between two continuous variables while also capturing differences between job roles. 
+
+- The x-axis: attractiveness scores (ranging from 0 to 100)
+- The y-axis: represents job suitability scores (ranging from 0 to 100). 
+- Each point represents the job suitability rating assigned to a hyper-realistic facial image based on its attractiveness score (recieved by mapping the hyper-realistic facial images on the existing GAN model by Peterson et al).
+- - Colors (colorblind-friendly accessibility):  
+  - Green: Client-facing roles
+  - Pink: Back-office roles
+- The trend lines are generated using a linear regression model (geom_smooth(method = "lm")), where job suitability scores are regressed on attractiveness scores. 
+- The slopes and text labels indicate the strength and direction of the relationship and help identify whether attractiveness has a stronger influence on one role compared to another. 
+- The slope difference and significance annocation: the plot incorporates an interaction analysis by explicitly displaying the slope difference between the two regression lines, along with a statistical significance annotation (e.g., "Significant (p < 0.05)"). This ensures viewers understand how the influence of attractiveness varies across job roles.
 
 
 
-
+### Key Findings
+The results showed that attractiveness positively influences job suitability scores, with a stronger effect for client-facing roles. The regression slopes indicate that for every unit increase in attractiveness, suitability scores rise more for client-facing jobs (slope = 0.87) than back-office roles (slope = 0.72), with a significant difference of 0.15 (p < 0.05). This suggests that employers place greater emphasis on appearance for roles requiring direct client interaction. These findings highlight the impact of visual stereotypes in hiring, reinforcing the need to address potential biases in job evaluations.
