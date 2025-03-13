@@ -1,93 +1,86 @@
-/* General Body Styles */
+/* === General Body Styles === */
 body {
     font-family: 'Arial', sans-serif;
-    color: #2c3e50; /* Soft dark grayish-blue for general text */
-    background-color: #f8f9fa; /* Light background for a fresher look */
+    color: #2c3e50; /* Dark grayish-blue for text */
+    background-color: #f8f9fa; /* Light background */
 }
 
-/* Header Styles */
+/* === Header Styles === */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Georgia', serif; /* Slightly more formal font for headers */
-    color: #17a2b8; /* Soft blue for a light, refreshing feel */
+    font-family: 'Georgia', serif; /* Formal font for headers */
+    color: #0077b6; /* Deep blue for a balanced, clear look */
 }
 
-h1 {
-    font-size: 36px; /* Slightly smaller than your previous 40px for a less imposing look */
-    margin-bottom: 0.5em; /* Ensuring proper spacing under headers */
-}
+h1 { font-size: 36px; margin-bottom: 0.5em; }
+h2 { font-size: 30px; margin-bottom: 0.4em; }
+h3 { font-size: 24px; margin-bottom: 0.3em; }
 
-h2 {
-    font-size: 30px;
-    margin-bottom: 0.4em;
-}
-
-h3 {
-    font-size: 24px;
-    margin-bottom: 0.3em;
-}
-
-/* Link Styles */
+/* === Link Styles === */
 a {
-    color: #20c997; /* Minty green for links to stand out softly */
-    text-decoration: none; /* No underline to keep it clean */
+    color: #20c997; /* Mint green for standard links */
+    text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #0c7c8c; /* Darker shade of blue when hovering for emphasis */
-    text-decoration: underline; /* Underline on hover for clarity */
+    color: #0c7c8c; /* Darker teal when hovered */
+    text-decoration: underline;
 }
 
-/* Navbar Customization */
+/* === Navbar Customization === */
 .navbar {
-    background-color: #b8daff; /* Very light blue background for navbar */
-    border-bottom: 2px solid #e3f2fd; /* Subtle border to define the navbar area */
+    background-color: #b8daff !important; /* Deeper blue for navbar */
+    border-bottom: 2px solid #005691;
 }
 
+/* Navbar Links - Ensure colors are properly applied */
 .navbar-nav .nav-link {
-    color: #17a2b8; /* Matching the header style */
-    font-weight: bold; /* Making navbar items bold */
+    color: #ffffff !important; /* White text for contrast */
+    font-weight: bold;
 }
 
-.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
-    color: #0d6efd; /* A vivid blue for hover states */
+.navbar-nav .nav-link:hover, 
+.navbar-nav .nav-link:focus {
+    color: #f8f9fa !important; /* Lighter shade on hover */
 }
 
 /* Active Navbar Link */
 .navbar-nav .active > .nav-link {
-    color: #fff;
-    background-color: #17a2b8;
+    color: #ffffff !important;
+    background-color: #005691 !important;
 }
 
-/* Sidebar Styling */
+/* === Sidebar Styling === */
 #sidebar {
-    background: #f8f9fa; /* Light background for the sidebar */
-    color: #20c997; /* Use the link color for sidebar text for consistency */
-    padding: 20px; /* Adequate padding for content within the sidebar */
+    background: #f8f9fa; /* Light background for sidebar */
+    color: #009E73; /* Teal-green text */
+    padding: 20px;
 }
 
 #sidebar h2 {
-    color: #17a2b8; /* Header color in the sidebar */
+    color: #0077b6; /* Matching header color */
 }
 
 #sidebar a {
-    color: #0c7c8c; /* Darker blue for sidebar links */
+    color: #0c7c8c; /* Sidebar links */
 }
 
 #sidebar a:hover {
-    color: #17a2b8; /* Lighter blue on hover for sidebar links */
+    color: #17a2b8;
     text-decoration: underline;
 }
 
-/* Table of Contents Customization */
+/* === Table of Contents (ToC) Customization === */
 #table-of-contents {
-    color: #17a2b8;
+    color: #0077b6;
     background-color: #e3f2fd;
     padding: 10px;
     border-radius: 5px;
 }
 
-.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+.list-group-item.active, 
+.list-group-item.active:hover, 
+.list-group-item.active:focus {
     color: #ffffff;
-    background-color: #20c997; /* Active item in ToC or list uses the link color */
+    background-color: #20c997;
     border-color: #20c997;
 }

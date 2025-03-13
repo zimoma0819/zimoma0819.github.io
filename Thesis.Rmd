@@ -6,19 +6,31 @@
 title: "What Is Beautiful Is Good: Visualizing the Role of Visual Stereotypes in the Workplace"
 ---
 
-[View My Proposal (PDF)](Zimo_MA_Proposal.pdf)
 
 
-## Job Suitability Score Distributions Across Industries and Roles
 
-This visualization examines how job suitability scores vary across industries and job roles. It aims to explore whether different roles (client-facing vs. back-office) receive systematically different ratings within Finance and Retail industries.  
+### **Research Overview**
 
-The data comes from participant ratings of job suitability for individuals in different roles, allowing us to analyze whether industry and role type influence perceived job suitability.
+This study investigates how visual stereotypes, especially perceptions of physical attractiveness, shape hiring decisions across different occupational roles. Rooted in the "what is beautiful is good" stereotype—where attractive individuals are often ascribed positive traits like competence and success—the research explores whether attractiveness biases vary systematically between client-facing roles (e.g., financial advisors, retail associates) and back-office positions (e.g., risk analysts, inventory managers).
+
+While prior work has established a "beauty premium" in hiring and earnings, most studies focus narrowly on specific jobs or industries. This project adopts a comparative lens, hypothesizing that attractiveness standards and potentially other biases, such as age and trustworthiness, are disproportionately emphasized in client-facing roles due to their emphasis on interpersonal interaction. To test this, we employ 817 synthetic, hyper-realistic adult facial images generated via StyleGAN2, paired with crowdsourced evaluations from diverse participants. Deep learning techniques are used to decode how facial features map to perceived job suitability, revealing the psychological and visual attributes that drive biases in hiring.
+
+By dissecting the interplay of attractiveness and occupational stereotypes, this research aims to advance theoretical understanding of workplace discrimination while offering actionable insights for equitable hiring practices. The findings could empower organizations to mitigate superficial biases, fostering diversity and fairness in recruitment.
+
+#### Research Questions
+1. **What are the visual stereotypes associated with client-facing versus back-office occupations?**  
+2. **How does perceived attractiveness influence these stereotypes?**  
+
+
+[Read The Full Proposal (PDF)](Zimo_MA_Proposal.pdf)
 
 ---
 
+### **Participants**
 
-```{r setup, include=FALSE}
+The study recruited 424 participants to complete a survey assessing job suitability judgments based on facial images. To ensure data reliability, interrater correlation was calculated between participants' ratings of repeated images and those of origial images. Participants whose ratings showed a correlation of 0 or negative values were excluded, resulting in a final sample of 376 participants for analysis.
+
+```{r, include=FALSE}
 library(tidyverse)
 library(ggplot2)
 library(dplyr)
@@ -37,6 +49,121 @@ knitr::opts_chunk$set(
 	include = TRUE,
 	out.width = "80%"
 )
+
+
+df <- read.csv("filtered_data.csv")
+```
+
+---
+
+#### Gender Distribution
+
+A larger proportion of participants identify as female, with a notable proportion identifying as male. A small number of participants identified as non-binary/third gender or chose not to disclose their gender.
+
+```{r, echo=FALSE}
+gender_filtered <- df$Gender[!is.na(df$Gender) & df$Gender != ""]
+
+gender_df <- data.frame(Gender = gender_filtered)
+
+P_gender <- ggplot(gender_df, aes(x = Gender)) +
+  geom_bar(fill = "lavender", color = "black") +
+  theme_minimal() +
+  labs(title = "Gender Distribution of Participants",
+       x = "Gender",
+       y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggplotly(P_gender, width = 800, height = 500)
+```
+
+---
+
+#### Age Distribution
+
+Most participants fall within the 25-34 age range, making up the largest proportion of respondents. The second largest group is 35-44, followed by 18-24. The sample includes participants from all age categories, ensuring a diverse range of experiences.
+
+```{r, echo=FALSE, warning=FALSE}
+age_filtered <- df$Age[!is.na(df$Age) & df$Age != ""]
+
+age_df <- data.frame(Age = age_filtered)
+
+P_age <- ggplot(age_df, aes(x = Age)) +
+  geom_histogram(stat="count", fill = "#20c997", color = "black", alpha = 0.7) +
+  theme_minimal() +
+  labs(title = "Age Distribution of Participants",
+       x = "Age",
+       y = "Frequency")
+
+ggplotly(P_age, width = 800, height = 500) 
+
+```
+
+---
+
+#### Education Distribution
+The majority of participants have completed a bachelor’s degree, followed by those who have attended some college and those with graduate degrees. A small number of participants reported high school or associate degrees as their highest level of education.
+
+```{r, echo=FALSE}
+
+
+education_filtered <- df$Education_Level[!is.na(df$Education_Level) & df$Education_Level != ""]
+
+education_df <- data.frame(Education_Level = education_filtered)
+
+education_levels_order <- c("Some high school", "High school graduate", "Some college", 
+                             "Associate's degree", "Bachelor's degree", "Graduate degree")
+
+education_df$Education_Level <- factor(education_df$Education_Level, levels = education_levels_order)
+
+P_edulevel <- ggplot(education_df, aes(x = Education_Level)) +
+  geom_bar(fill = "#17a2b8", color = "black") +
+  theme_minimal() +
+  labs(title = "Distribution of Education Levels",
+       x = "Education Level",
+       y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggplotly(P_edulevel, width = 800, height = 500) 
+
+
+```
+
+---
+
+#### Ethnicity Distribution
+
+The sample is predominantly White/Caucasian, followed by Black/African American, Asian, and Hispanic/Latino participants. Smaller groups include individuals identifying as Pacific Islander, American Indian/Alaskan Native, or multiple ethnicities.
+
+```{r, echo=FALSE}
+ethnicity_filtered <- df$Ethnicity[!is.na(df$Ethnicity) & df$Ethnicity != ""]
+
+ethnicity_df <- data.frame(Ethnicity = ethnicity_filtered)
+
+P_ethnicity <- ggplot(ethnicity_df, aes(x = Ethnicity)) +
+  geom_bar(fill = "#b8daff", color = "black") +
+  theme_minimal() +
+  labs(title = "Ethnicity Distribution of Participants",
+       x = "Ethnicity",
+       y = "Count") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggplotly(P_ethnicity, width = 800, height = 500)
+```
+
+
+
+
+---
+
+### **Job Suitability Score Distributions Across Industries and Roles**
+
+This visualization examines how **job suitability scores** vary across industries and job roles. It aims to explore whether different roles (client-facing vs. back-office) receive systematically different ratings within Finance and Retail industries.  
+
+The data comes from participant ratings of job suitability for individuals in different roles, allowing us to analyze whether industry and role type influence perceived job suitability.
+
+
+
+```{r setup, include=FALSE}
 
 # Load actual data
 data <- read.csv("org_thesis_data.csv")
@@ -144,7 +271,7 @@ ggplotly(P_final1, width = 800, height = 500) %>%
 
 
 
-### Understanding the Visualization
+#### Understanding the Visualization
 The density plot below shows the distribution of mean job suitability scores for different job roles across two industries.  
 
 - X-axis: Mean suitability score rated per stimulus.  
@@ -155,9 +282,8 @@ The density plot below shows the distribution of mean job suitability scores for
   - Pink (Back-office roles): Risk Analyst & Inventory Manager  
 - Dashed vertical lines: Represent the mean suitability score for each role, with numerical labels indicating their values.
 
----
 
-### Key Findings
+#### Key Findings
 For the Finance industry (top panel), the distribution of job suitability scores for client-facing and back-office roles is highly overlapping, with the mean score for client-facing jobs (55.97) slightly higher than that of back-office roles (55.25). This suggests that suitability scores for finance roles remain consistent regardless of whether the job is client-facing or back-office, indicating that appearance-based bias may be less prevalent in suitability judgments within the finance industry.
 
 For the Retail industry (bottom panel), the mean job suitability scores for client-facing (61.4) and back-office (56.12) roles in the retail industry show a clearer separation compared to finance, with client-facing roles receiving higher scores. This suggests that in retail, people may perceive client-facing jobs as requiring different traits, potentially reflecting appearance-based or personality-driven stereotypes.
@@ -167,7 +293,7 @@ For the Retail industry (bottom panel), the mean job suitability scores for clie
 
 ---
 
-## The Effect of Attractiveness on Job Suitability Scores
+### **The Effect of Attractiveness on Job Suitability Scores**
 
 Since I am still in the process of modeling, I will use simulated data (job suitability ratings and perceived attractiveness scores) from 100 images to generate this visualization for presentation purposes.
 
@@ -263,7 +389,7 @@ P_final2 <- ggplot(data1, aes(x = AttractivenessScore, y = SuitabilityScore, col
 ```
 
 
-```{r echo=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE}
 # Convert to plotly with adjusted layout
 ggplotly(P_final2, width = 800, height = 500) %>%
   layout(
@@ -277,7 +403,7 @@ ggplotly(P_final2, width = 800, height = 500) %>%
     )
   )
 ```
-### Understanding the Visualization
+#### Understanding the Visualization
 A scatter plot with regression lines was chosen because it effectively visualizes the relationship between two continuous variables while also capturing differences between job roles. 
 
 - The x-axis: attractiveness scores (ranging from 0 to 100)
@@ -292,5 +418,5 @@ A scatter plot with regression lines was chosen because it effectively visualize
 
 
 
-### Key Findings
+#### Key Findings
 The results showed that attractiveness positively influences job suitability scores, with a stronger effect for client-facing roles. The regression slopes indicate that for every unit increase in attractiveness, suitability scores rise more for client-facing jobs (slope = 0.87) than back-office roles (slope = 0.72), with a significant difference of 0.15 (p < 0.05). This suggests that employers place greater emphasis on appearance for roles requiring direct client interaction. These findings highlight the impact of visual stereotypes in hiring, reinforcing the need to address potential biases in job evaluations.

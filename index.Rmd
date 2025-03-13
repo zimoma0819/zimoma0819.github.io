@@ -4,37 +4,28 @@
 
 ## Stay Curious, Stay Compassionate
 
-Hello! I'm Zimo (Zina) Ma, a graduate student at the University of Chicago, where I am pursuing a Master of Arts in Computational Social Science, expected to graduate in June 2025. My academic and professional journey is a blend of technical rigor with social consciousness, aiming to leverage data science to decode complex human behaviors and drive equitable solutions.
+Hello! I'm **Zimo (Zina) Ma**, a **graduate student** at the **University of Chicago**, pursuing a **Master of Arts in Computational Social Science** (expected **June 2025**). My academic and professional journey blends **data science** with **social impact**, aiming to decode complex human behaviors and promote equitable solutions.
 
+### Education Background
 
+I hold a **Bachelor of Arts** in **Mathematics and Psychology** from **DePauw University**. My interdisciplinary training integrates quantitative modeling with behavioral insights, equipping me to tackle real-world challenges.  
 
-### Education Backgrounds
+### Research Experience
 
-I graduated from DePauw University with a Bachelor of Arts, majoring in both Mathematics and Psychology. This interdisciplinary education enables me to integrate quantitative modeling with deep behavioral insights, providing a robust foundation for tackling complex challenges. Currently, as a graduate student at the University of Chicago, I am pursuing a Master of Arts in Computational Social Science, expected to graduate in June 2025. 
+At the **University of Chicago**, my research focuses on **biases in hiring practices** and developing data-driven strategies to promote fairer employment decisions. My **MA Thesis** explores **visual stereotypes in the workplace**, investigating how **facial attributes**—such as attractiveness and gender—affect **job suitability assessments** in **client-facing vs. back-office roles**.
 
+Previously, as a **Research Analyst** at **DePauw University**, I analyzed **gender disparities** using GIS and statistical methods, examining how **natural disasters disproportionately impact Indian women**. I also studied the **effects of COVID-19 on STEM education**, applying Chi-Square tests and t-tests to assess disparities in learning experiences.
 
-### Reseach Experience
+➡️ **Check out my work under the "Projects" section!**  
 
-Throughout my academic career, I have engaged in various research projects that blend computational methods with social science to address pertinent issues. My current research (MA Thesis) explores visual stereotypes in the workplace, focusing on how perceived attributes based on face, such as attractiveness and trustworthiness, and gender stereotypes influence hiring decisions.
+### Future Goals  
 
-My experience at DePauw University as a Research Analyst allowed me to delve into gender-related disparities, where I utilized GIS and statistical methods to explore the socioeconomic factors influencing the disproportional impact of natural disasters on Indian women. I also focused on examining the effects of the COVID-19 pandemic on STEM education. Through comprehensive data analysis using Chi-Square tests and independent t-tests, I assessed how different student demographics experienced changes in STEM learning environments during the pandemic. 
+I am passionate about **machine learning, data visualization,** and using **computational methods** to drive **social impact**.  
 
-At the University of Chicago, my focus has shifted towards understanding visual stereotypes in the workplace. My ongoing thesis work investigates how perceptions of visual stereotypes—particularly facial attractiveness, gender, and 32 other attributes—affect job suitability assessments for client-facing versus back-office roles. This research aims to identify and analyze biases in hiring practices and develop data-driven strategies to mitigate these biases, promoting more equitable employment practices. 
+### Connect With Me  
 
-Each of these research endeavors has not only sharpened my skills in data handling and analysis but also deepened my understanding of how data can profoundly influence public policy and human rights initiatives. This appreciation drives my ongoing commitment to apply rigorous data science methods to uncover and address systemic challenges within society.
+Feel free to **reach out** via email at [zimoma0819@uchicago.edu](mailto:zimoma0819@uchicago.edu) or connect with me on **[LinkedIn](https://www.linkedin.com/in/zimo-ma-95a62b220/)**.  
 
-You may click **Project** to check some of my research.
+📩 **Let’s connect and collaborate!**  
 
-
-### Future Goals
-
-Looking ahead, I aim to further my expertise in machine learning and data visualization, with the goal of contributing to innovative solutions in social science and policy-making. I am particularly interested in the intersection of technology and social impact, aspiring to create tools and models that promote equity and understanding across diverse communities.
-
-
-
-### Connect With Me
-
-I am always eager to connect with fellow data enthusiasts and professionals. You can reach me at [my email](mailto:zimoma0819@uchicago.edu) or connect with me on [LinkedIn](https://www.linkedin.com/in/zimo-ma-95a62b220/). Let's collaborate and make a positive impact together!
-
-Thank you for visiting my site and getting to know more about my professional journey and personal interests. I look forward to the opportunities and challenges that lie ahead!
-
+Thank you for visiting my site—I look forward to future opportunities and challenges! 🚀
