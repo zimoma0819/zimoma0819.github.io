@@ -6,4 +6,8 @@ output:
     toc_float: false
 ---
 
+<head>
+  <link rel="stylesheet" type="text/css" href="/custom.css">
+</head>
+
 <iframe src="Zimo_Ma_Resume.pdf" width="100%" height="900" frameborder="0" />

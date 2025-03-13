@@ -5,6 +5,9 @@ output:
     toc: false
     toc_float: false
 ---
+<head>
+  <link rel="stylesheet" type="text/css" href="/custom.css">
+</head>
 
 [View My Scholarly Work (PDF)](COVID-19_is_Not_All_Bad_News.pdf)
 
