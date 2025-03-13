@@ -1,5 +1,5 @@
 name: "Zimo Ma, Computational Social Scientist"
-output_dir: "_site_html"
+output_dir: "."
 navbar:
   title: "Zimo Ma, Computational Social Scientist"
   right:
