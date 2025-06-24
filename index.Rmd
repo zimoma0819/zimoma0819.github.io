@@ -1,31 +1,91 @@
 ---
-#title: "Welcome to Zina's Home Page"
+title: "Welcome to Zina's Home Page"
+output:
+  html_document:
+    theme: flatly
+    toc: false
 ---
+
+```{r, echo=FALSE, results='asis'}
+cat('
+<!-- Language Switch Buttons -->
+<div style="text-align: right; margin-bottom: 1em;">
+  <button onclick="switchLang(\'en\')">English</button>
+  <button onclick="switchLang(\'zh\')">中文</button>
+</div>
+
+<!-- English Content -->
+<div class="lang-en">
 
 ## Stay Curious, Stay Compassionate
 
-Hello! I'm **Zimo (Zina) Ma**, a **graduate student** at the **University of Chicago**, pursuing a **Master of Arts in Computational Social Science** (expected **June 2025**). My academic and professional journey blends **data science** with **social impact**, aiming to decode complex human behaviors and promote equitable solutions.
+Hello! I\'m **Zimo (Zina) Ma**, a **recent graduate** from the **University of Chicago**, where I earned a **Master of Arts in Computational Social Science** in **June 2025**. My academic and professional journey blends **data science** with **social impact**, aiming to decode complex human behaviors and drive equitable solutions.
 
-### Education Background
+### 🎓 Education
 
-I hold a **Bachelor of Arts** in **Mathematics and Psychology** from **DePauw University**. My interdisciplinary training integrates quantitative modeling with behavioral insights, equipping me to tackle real-world challenges.  
+I hold a **Bachelor of Arts** in **Mathematics and Psychology** from **DePauw University**, and recently completed my **Master’s** at UChicago, where I focused on applying computational methods to real-world social challenges. My training bridges quantitative modeling, behavioral science, and statistical programming.
 
-### Research Experience
+### 🔬 Research Experience
 
-At the **University of Chicago**, my research focuses on **biases in hiring practices** and developing data-driven strategies to promote fairer employment decisions. My **MA Thesis** explores **visual stereotypes in the workplace**, investigating how **facial attributes**—such as attractiveness and gender—affect **job suitability assessments** in **client-facing vs. back-office roles**.
+At the University of Chicago, my MA thesis explored **visual stereotypes in hiring**, examining how **facial features**—like attractiveness and gender—affect **perceived job suitability** across **client-facing** and **back-office roles**. I used machine learning models and interactive visualizations to uncover bias patterns and propose fairer hiring strategies.
 
-Previously, as a **Research Analyst** at **DePauw University**, I analyzed **gender disparities** using GIS and statistical methods, examining how **natural disasters disproportionately impact Indian women**. I also studied the **effects of COVID-19 on STEM education**, applying Chi-Square tests and t-tests to assess disparities in learning experiences.
+Previously, at DePauw, I served as a Research Analyst on two projects:  
+- Investigating **gender disparities** in natural disaster mortality among Indian women using GIS and statistical methods.  
+- Analyzing how **COVID-19 impacted STEM education** through survey-based statistical analysis (Chi-Square, t-tests).  
 
-➡️ **Check out my work under the "Projects" section!**  
+➡️ **Explore these projects in the "Projects" section!"**
 
-### Future Goals  
+### 🚀 Professional Focus & Goals
 
-I am passionate about **machine learning, data visualization,** and using **computational methods** to drive **social impact**.  
+I am passionate about **data**, **machine learning**, **data visualization**, and using **computational tools** to uncover insights that matter. I aspire to work at the intersection of **technology and human behavior**, whether in **AI product design**, **consumer insights**, or **public-interest tech**.
 
-### Connect With Me  
+### 🤝 Connect With Me
 
-Feel free to **reach out** via email at [zimoma0819@uchicago.edu](mailto:zimoma0819@uchicago.edu) or connect with me on **[LinkedIn](https://www.linkedin.com/in/zimo-ma-95a62b220/)**.  
+Feel free to reach out via email at <a href="mailto:zimoma0819@uchicago.edu">zimoma0819@uchicago.edu</a> or connect with me on <a href="https://www.linkedin.com/in/zimo-ma-95a62b220/">LinkedIn</a>.
 
-📩 **Let’s connect!**  
+📩 <strong>Let’s collaborate or just chat about data, design, and impact!</strong>
 
-Thank you for visiting my site!
+</div>
+
+<!-- 中文内容 -->
+<div class="lang-zh" style="display:none;">
+
+## 保持好奇，心怀热忱
+
+你好！我是 **马子墨（Zina）**，**芝加哥大学计算机社会科学硕士**（2025年6月毕业）。我的学术与职业道路融合了**数据科学与社会影响**，致力于解析复杂人类行为并推动公平解决方案。
+
+### 🎓 教育背景
+
+我拥有 **迪堡大学数学与心理学双专业学士学位**，近期在芝加哥大学完成硕士学位，专注于运用计算方法解决现实社会问题。我的专业训练横跨量化建模、行为科学与统计编程。
+
+### 🔬 研究经验
+
+在芝加哥大学，我的硕士论文研究**招聘中的视觉刻板印象**，通过机器学习模型和交互可视化，揭示了面部特征（如吸引力与性别）如何影响客户对接与后台岗位的适岗性评估，并提出更公平的招聘策略。
+
+此前在迪堡大学期间，我作为研究分析师参与了两项课题：  
+- 运用GIS与统计方法研究**印度女性在自然灾害中的性别生存差异**；  
+- 通过问卷调查与统计方法（卡方检验/t检验）分析研究 **新冠疫情对理科STEM教育的影响**。  
+
+➡️ **更多项目细节请见"项目"版块！**
+
+### 🚀 职业兴趣与目标
+
+我深耕**数据科学**、**机器学习**与**数据可视化**领域，擅长运用**计算工具**挖掘深层洞见。职业理想是搭建**科技与人文**的桥梁，无论是AI产品设计、消费者洞察还是公益科技方向。
+
+### 🤝 联系方式
+
+欢迎通过邮箱 <a href="mailto:zimoma0819@uchicago.edu">zimoma0819@uchicago.edu</a> 联系我，或在 <a href="https://www.linkedin.com/in/zimo-ma-95a62b220/">LinkedIn</a> 上找到我。
+
+📩 <strong>欢迎交流合作，或聊聊数据、设计与社会影响！</strong>
+
+</div>
+
+<!-- JavaScript 控制语言切换 -->
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll(".lang-en").forEach(el => el.style.display = lang === "en" ? "block" : "none");
+    document.querySelectorAll(".lang-zh").forEach(el => el.style.display = lang === "zh" ? "block" : "none");
+  }
+</script>
+')
+```
