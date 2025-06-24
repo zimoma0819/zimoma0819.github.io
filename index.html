@@ -11,12 +11,12 @@
 
 
 
-<title>index.knit</title>
+<title>Welcome to Zina’s Home Page</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -29,14 +29,11 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -225,75 +222,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-.tocify-subheader {
-  display: inline;
-}
-.tocify-subheader .tocify-item {
-  font-size: 0.95em;
-}
-
-</style>
-
-
 
 </head>
 
@@ -301,16 +229,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -372,67 +290,119 @@ div.tocify {
 
 
 
+<h1 class="title toc-ignore">Welcome to Zina’s Home Page</h1>
 
 </div>
 
 
-<div id="stay-curious-stay-compassionate" class="section level2">
+<!-- Language Switch Buttons -->
+<div style="text-align: right; margin-bottom: 1em;">
+<p><button onclick="switchLang('en')">English</button>
+<button onclick="switchLang('zh')">中文</button></p>
+</div>
+<!-- English Content -->
+<div id="stay-curious-stay-compassionate"
+class="section level2 lang-en">
 <h2>Stay Curious, Stay Compassionate</h2>
-<p>Hello! I’m <strong>Zimo (Zina) Ma</strong>, a <strong>graduate
-student</strong> at the <strong>University of Chicago</strong>, pursuing
-a <strong>Master of Arts in Computational Social Science</strong>
-(expected <strong>June 2025</strong>). My academic and professional
-journey blends <strong>data science</strong> with <strong>social
-impact</strong>, aiming to decode complex human behaviors and promote
-equitable solutions.</p>
-<div id="education-background" class="section level3">
-<h3>Education Background</h3>
+<p>Hello! I’m <strong>Zimo (Zina) Ma</strong>, a <strong>recent
+graduate</strong> from the <strong>University of Chicago</strong>, where
+I earned a <strong>Master of Arts in Computational Social
+Science</strong> in <strong>June 2025</strong>. My academic and
+professional journey blends <strong>data science</strong> with
+<strong>social impact</strong>, aiming to decode complex human behaviors
+and drive equitable solutions.</p>
+<div id="education" class="section level3">
+<h3>🎓 Education</h3>
 <p>I hold a <strong>Bachelor of Arts</strong> in <strong>Mathematics and
-Psychology</strong> from <strong>DePauw University</strong>. My
-interdisciplinary training integrates quantitative modeling with
-behavioral insights, equipping me to tackle real-world challenges.</p>
+Psychology</strong> from <strong>DePauw University</strong>, and
+recently completed my <strong>Master’s</strong> at UChicago, where I
+focused on applying computational methods to real-world social
+challenges. My training bridges quantitative modeling, behavioral
+science, and statistical programming.</p>
 </div>
 <div id="research-experience" class="section level3">
-<h3>Research Experience</h3>
-<p>At the <strong>University of Chicago</strong>, my research focuses on
-<strong>biases in hiring practices</strong> and developing data-driven
-strategies to promote fairer employment decisions. My <strong>MA
-Thesis</strong> explores <strong>visual stereotypes in the
-workplace</strong>, investigating how <strong>facial
-attributes</strong>—such as attractiveness and gender—affect <strong>job
-suitability assessments</strong> in <strong>client-facing
-vs. back-office roles</strong>.</p>
-<p>Previously, as a <strong>Research Analyst</strong> at <strong>DePauw
-University</strong>, I analyzed <strong>gender disparities</strong>
-using GIS and statistical methods, examining how <strong>natural
-disasters disproportionately impact Indian women</strong>. I also
-studied the <strong>effects of COVID-19 on STEM education</strong>,
-applying Chi-Square tests and t-tests to assess disparities in learning
-experiences.</p>
-<p>➡️ <strong>Check out my work under the “Projects”
-section!</strong></p>
+<h3>🔬 Research Experience</h3>
+<p>At the University of Chicago, my MA thesis explored <strong>visual
+stereotypes in hiring</strong>, examining how <strong>facial
+features</strong>—like attractiveness and gender—affect
+<strong>perceived job suitability</strong> across
+<strong>client-facing</strong> and <strong>back-office roles</strong>. I
+used machine learning models and interactive visualizations to uncover
+bias patterns and propose fairer hiring strategies.</p>
+<p>Previously, at DePauw, I served as a Research Analyst on two
+projects:<br />
+- Investigating <strong>gender disparities</strong> in natural disaster
+mortality among Indian women using GIS and statistical methods.<br />
+- Analyzing how <strong>COVID-19 impacted STEM education</strong>
+through survey-based statistical analysis (Chi-Square, t-tests).</p>
+<p>➡️ <strong>Explore these projects in the “Projects”
+section!“</strong></p>
 </div>
-<div id="future-goals" class="section level3">
-<h3>Future Goals</h3>
-<p>I am passionate about <strong>machine learning, data
-visualization,</strong> and using <strong>computational methods</strong>
-to drive <strong>social impact</strong>.</p>
+<div id="professional-focus-goals" class="section level3">
+<h3>🚀 Professional Focus &amp; Goals</h3>
+<p>I am passionate about <strong>data</strong>, <strong>machine
+learning</strong>, <strong>data visualization</strong>, and using
+<strong>computational tools</strong> to uncover insights that matter. I
+aspire to work at the intersection of <strong>technology and human
+behavior</strong>, whether in <strong>AI product design</strong>,
+<strong>consumer insights</strong>, or <strong>public-interest
+tech</strong>.</p>
 </div>
 <div id="connect-with-me" class="section level3">
-<h3>Connect With Me</h3>
-<p>Feel free to <strong>reach out</strong> via email at <a
-href="mailto:zimoma0819@uchicago.edu">zimoma0819@uchicago.edu</a> or
-connect with me on <strong><a
-href="https://www.linkedin.com/in/zimo-ma-95a62b220/">LinkedIn</a></strong>.</p>
-<p>📩 <strong>Let’s connect!</strong></p>
-<p>Thank you for visiting my site!</p>
+<h3>🤝 Connect With Me</h3>
+<p>Feel free to reach out via email at
+<a href="mailto:zimoma0819@uchicago.edu">zimoma0819@uchicago.edu</a> or
+connect with me on
+<a href="https://www.linkedin.com/in/zimo-ma-95a62b220/">LinkedIn</a>.</p>
+<p>📩 <strong>Let’s collaborate or just chat about data, design, and
+impact!</strong></p>
 </div>
 </div>
+<!-- 中文内容 -->
+<div id="保持好奇心怀热忱" class="section level2 lang-zh"
+style="display:none;">
+<h2>保持好奇，心怀热忱</h2>
+<p>你好！我是
+<strong>马子墨（Zina）</strong>，<strong>芝加哥大学计算机社会科学硕士</strong>（2025年6月毕业）。我的学术与职业道路融合了<strong>数据科学与社会影响</strong>，致力于解析复杂人类行为并推动公平解决方案。</p>
+<div id="教育背景" class="section level3">
+<h3>🎓 教育背景</h3>
+<p>我拥有
+<strong>迪堡大学数学与心理学双专业学士学位</strong>，近期在芝加哥大学完成硕士学位，专注于运用计算方法解决现实社会问题。我的专业训练横跨量化建模、行为科学与统计编程。</p>
+</div>
+<div id="研究经验" class="section level3">
+<h3>🔬 研究经验</h3>
+<p>在芝加哥大学，我的硕士论文研究<strong>招聘中的视觉刻板印象</strong>，通过机器学习模型和交互可视化，揭示了面部特征（如吸引力与性别）如何影响客户对接与后台岗位的适岗性评估，并提出更公平的招聘策略。</p>
+<p>此前在迪堡大学期间，我作为研究分析师参与了两项课题：<br />
+-
+运用GIS与统计方法研究<strong>印度女性在自然灾害中的性别生存差异</strong>；<br />
+- 通过问卷调查与统计方法（卡方检验/t检验）分析研究
+<strong>新冠疫情对理科STEM教育的影响</strong>。</p>
+<p>➡️ <strong>更多项目细节请见”项目”版块！</strong></p>
+</div>
+<div id="职业兴趣与目标" class="section level3">
+<h3>🚀 职业兴趣与目标</h3>
+<p>我深耕<strong>数据科学</strong>、<strong>机器学习</strong>与<strong>数据可视化</strong>领域，擅长运用<strong>计算工具</strong>挖掘深层洞见。职业理想是搭建<strong>科技与人文</strong>的桥梁，无论是AI产品设计、消费者洞察还是公益科技方向。</p>
+</div>
+<div id="联系方式" class="section level3">
+<h3>🤝 联系方式</h3>
+<p>欢迎通过邮箱
+<a href="mailto:zimoma0819@uchicago.edu">zimoma0819@uchicago.edu</a>
+联系我，或在
+<a href="https://www.linkedin.com/in/zimo-ma-95a62b220/">LinkedIn</a>
+上找到我。</p>
+<p>📩 <strong>欢迎交流合作，或聊聊数据、设计与社会影响！</strong></p>
+</div>
+</div>
+<!-- JavaScript 控制语言切换 -->
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll(".lang-en").forEach(el => el.style.display = lang === "en" ? "block" : "none");
+    document.querySelectorAll(".lang-zh").forEach(el => el.style.display = lang === "zh" ? "block" : "none");
+  }
+</script>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -465,35 +435,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
